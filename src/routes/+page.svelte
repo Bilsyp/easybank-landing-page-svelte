@@ -96,7 +96,6 @@
     height: 70vh;
     background: url("../lib/images/bg-intro-mobile.svg");
     background-size: cover;
-    background-attachment: fixed;
     z-index: -1;
     transition: all 1s ease-in-out;
   }
