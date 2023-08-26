@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  section {
+    @apply py-16  tablet:py-24;
+  }
+  p {
+    @apply text-Grayish_Blue text-[0.97rem]   font-medium leading-7;
+  }
+  h2 {
+    @apply text-Dark_Blue;
+  }
+}
+
+:root {
+  --Dark_Blue: hsl(233, 26%, 24%);
+  --Lime_Green: hsl(136, 65%, 51%);
+  --Bright_Cyan: hsl(192, 70%, 51%);
+
+  --Grayish_Blue: hsl(233, 8%, 62%);
+  --Light_Grayish_Blue: hsl(220, 16%, 96%);
+  --Very_Light_Gray: hsl(0, 0%, 98%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-size: 18px;
+  font-family: "Public Sans", sans-serif;
+  background-color: var(--Very_Light_Gray);
+}
+
+footer {
+  color: white !important;
+}
+.hiddens {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+.hiddens.article_item:nth-child(1),
+.hiddens.feature_item:nth-child(1) {
+  transition-delay: 600ms;
+}
+.hiddens.article_item:nth-child(2),
+.hiddens.feature_item:nth-child(2) {
+  transition-delay: 800ms;
+}
+.hiddens.article_item:nth-child(3),
+.hiddens.feature_item:nth-child(3) {
+  transition-delay: 1000ms;
+}
+.hiddens.article_item:nth-child(4),
+.hiddens.feature_item:nth-child(4) {
+  transition-delay: 1200ms;
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}
